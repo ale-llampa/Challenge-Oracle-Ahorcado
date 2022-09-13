@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Stick No Bills', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+/* Estilos contenedor principal */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Estilos pantalla de Juego */
+main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    height: 620px;
+    margin: 0 0;
+    border: 1px solid brown;
+    border-radius: 10px;
+    background: linear-gradient(
+        20deg,rgba(248, 247, 247, 0.8), rgba(255, 255, 255, 0.5));
+}
+
+.ventana-aviso{
+    z-index: 9999;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(104, 124, 105, 0.5);
+    
+}
+
+.ventana{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    height: 210px;
+    width: 360px;
+    border-style:double;
+}
+
+.titulo-ganaste{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 12px;
+    text-shadow: green 0px 0px 5px;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.titulo-perdiste{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 12px;
+    text-shadow: white 2px 2px 5px;
+    margin-bottom: 20px;
+    color: rgb(110, 0, 0);
+    text-shadow:rgb(110, 0, 0) 0px 0px 10px ;
+}
+
+.palabra-aviso{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-shadow: black 0 0 10px;
+}
+
+.main-win{
+    background: linear-gradient(
+        20deg,rgba(220, 223, 37, 0.8), rgba(205, 252, 143, 0.5));
+}
+
+.main-lose{
+    background: linear-gradient(
+        20deg,rgba(255, 87, 87, 0.8), rgba(255, 14, 14, 0.5));
+}
+
+.img-logo{
+    position: absolute;
+    object-fit: none;
+    height: 49px;
+    width: 37px;
+    top:10px;
+    left:10px;
+}
+
+
+/* Estilos Pantalla Inicial al ingresar al Sitio */
+.pantalla-inicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-inicial{
+    margin-bottom: 110px;
+    font-size: 62px;
+    font-weight: 700;
+    letter-spacing: 16px;
+    color: rgb(153, 39, 39);
+    text-shadow: black 1.5px 1.5px 1px,  black -1.5px 0px 1px;    
+}
+
+.btn-iniciar{
+    width: 200px;
+    height: 65px;
+    margin-bottom: 20px;
+    background-color: brown;
+    color: white;
+    border:none;
+    border-radius: 24px;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.btn-iniciar:hover {
+    cursor: pointer;
+    border: 1px solid lightslategray;
+}
+
+.btn-iniciar:active{
+    background-color: rgba(165, 42, 42, 0.9);
+}
+
+.btn-agregar{
+    width: 180px;
+    height: 45px;
+    background-color: lightsalmon;
+    color: brown;
+    border:none;
+    border-radius: 24px;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.btn-agregar:hover{
+    cursor: pointer;
+    border: 1px solid lightslategray;
+}
+
+.btn-agregar:active{
+    background-color: rgba(255, 160, 122, 0.9);
+}
+
+
+/* Estilos Agregar Palabra */
+.agregar-palabra{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-ingresar{
+    text-align: center;
+    outline: none;
+    background-color:transparent;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 220px;
+
+}
+
+.info-agregar {
+    color: rgb(102, 73, 73);
+    margin-left: 18px;
+    margin-bottom: 12px;
+}
+
+.btn-juego{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn {
+    width: 240px;
+    height: 50px;
+    border: none;
+    border-radius: 18px;
+    font-size: 1.1em;
+}
+
+.btn-primario{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: brown;
+    color: white;
+}
+
+.btn-primario:hover {
+    cursor: pointer;
+    border: 1px solid lightslategray;
+}
+
+.btn-primario:active{
+    background-color: rgba(165, 42, 42, 0.9);
+}
+
+.btn-secundario{
+    margin-right: 20px;
+    background-color: lightsalmon;
+    color: brown;
+}
+
+.btn-secundario:hover{
+    cursor: pointer;
+    border: 1px solid lightslategray;
+}
+
+.btn-secundario:active{
+    background-color: rgba(255, 160, 122, 0.9);
+    color: rgba(165, 42, 42, 0.6);
+}
+
+
+/* Estilos pantalla de juego Ahorcado*/
+.botonera{
+    text-align: center;
+}
+
+.case-letras{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 42px;
+}
+
+.letra{
+    font-family: 'Stick No Bills', sans-serif;
+    display: inline-block;
+    margin-left: 10px;
+    border-bottom: solid;
+    text-align: center;
+    font-size: 32px;
+    color:brown;
+    font-weight:bolder;
+    width: 36px;
+    height: 36px;
+}
+
+.errada{
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 22px;
+    color:darkslategrey;
+    
+}
+
+    /* Partes de la Horca */
+.horca{
+    position: relative;
+    width: 520px;
+    height: 380px;
+    filter: grayscale();
+}
+
+.parte-horca{
+    position: absolute;
+}
+
+.base{
+    position: absolute;
+    margin-left: 120px;
+}
+
+.parte6{
+    right: 110px;
+    top: 46px;
+}
+
+.parte5{
+    right: 139px;
+    top:106px
+}
+
+.parte4{
+    right: 140px;
+    top: 130px;
+}
+
+.parte3{
+    right: 105px;
+    top: 130px;
+}
+
+.parte2{
+    right: 140px;
+    top: 237px
+}
+
+.parte1{
+    right: 105px;
+    top: 237px;
+}
+
+
+/* Ocultar elementos */
+.ocultar{
+    display: none;
+}
+

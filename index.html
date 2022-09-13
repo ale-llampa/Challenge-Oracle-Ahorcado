@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Ahorcado</title>
+</head>
+<body>
+
+    <!-- <div class="ventana-aviso ganaste ocultar">
+        <div class="ventana">
+            <p class="titulo-ganaste">GANASTE!</p>
+            <p class="palabra-aviso">Palabra secreta: </p>
+            <button class="btn btn-primario btn-ok">OK</button>
+        </div>
+    </div>
+    <div class="ventana-aviso perdiste ocultar">
+        <div class="ventana">
+            <p class="titulo-perdiste">PERDISTE</p>
+            <p class="palabra-aviso subtitulo">Palabra secreta: </p>
+            <button class="btn btn-primario btn-salir">OK</button>
+        </div>
+    </div> -->
+
+    <div class="contenedor">
+        <main>
+        <!-- Imagen con el Logo de Alura -->
+            <img class="img-logo" src="./img/Logo.png" alt="Logo Alura">
+        <!-- Pantalla inicial del juego -->
+            <div class="pantalla-inicial ">
+                <label class="titulo-inicial">AHORCADO</label>
+                <button class="btn-iniciar">INICIAR JUEGO</button>
+                <button class="btn-agregar">AGREGAR NUEVA PALABRA</button>
+            </div>
+        <!-- Pantalla de Agregar nueva palabra -->
+            <div class="agregar-palabra ocultar">
+                <input class="input-ingresar" type="text" placeholder="Ingrese una palabra" maxlength="16">
+                <p class="info-agregar">ⓘ Máximo 8 letras</p>
+                <div class="btn-juego">
+                    <button class="btn btn-guardar btn-primario">Guardar y empezar</button>
+                    <button class="btn btn-cancelar btn-secundario">Cancelar</button>
+                </div>
+            </div>
+        <!-- Juego del Ahorcado -->
+            <div class="juego ocultar">
+                <div class="horca">
+                    <img src="./img/1.png" class="base">
+                    <img src="./img/2.png" class="parte-horca parte6 ocultar">
+                    <img src="./img/3.png" class="parte-horca parte5 ocultar">
+                    <img src="./img/4.png" class="parte-horca parte4 ocultar">
+                    <img src="./img/5.png" class="parte-horca parte3 ocultar">
+                    <img src="./img/6.png" class="parte-horca parte2 ocultar">
+                    <img src="./img/7.png" class="parte-horca parte1 ocultar">
+                </div>
+                <div class="case-letras">
+                    <label class="letra letra1 ocultar"></label>
+                    <label class="letra letra2 ocultar"></label>
+                    <label class="letra letra3 ocultar"></label>
+                    <label class="letra letra4 ocultar"></label>
+                    <label class="letra letra5 ocultar"></label>
+                    <label class="letra letra6 ocultar"></label>
+                    <label class="letra letra7 ocultar"></label>
+                    <label class="letra letra8 ocultar"></label>
+                </div>
+                <div class="case-letras">
+                    <label class="errada"></label>
+                </div>
+                <div class="botonera">
+                    <button class="btn btn-nuevo btn-primario">Nuevo Juego</button>
+                    <button class="btn btn-desistir btn-secundario">Desistir</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="inicial.js"></script>
+</body>
+</html>
