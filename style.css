@@ -327,3 +327,7 @@ main{
     display: none;
 }
 
+.rodapie{
+    position: absolute;
+    bottom: 2px;
+}
